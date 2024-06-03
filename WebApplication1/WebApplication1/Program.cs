@@ -16,6 +16,8 @@ using WebApplication1.Entities;
 // dotnet ef dbcontext scaffold "Data Source=localhost;Initial Catalog=APBD;User ID=sa;Password=asd123POKo223;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Context
 
 
+//"Pjatk": "Data Source=db-mssql;InitialCatalog=2019SBD;Integrated Security=True;Encrypt=False"
+
 //////////////
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +26,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
 
 
 //NNNNNNNEEEEEE
@@ -43,7 +46,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.MapControllers();
 
 app.Run();
