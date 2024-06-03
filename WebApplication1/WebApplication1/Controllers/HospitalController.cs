@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualBasic;
+using WebApplication1.DTO;
 using WebApplication1.Entities;
 
 namespace WebApplication1.Controllers;
@@ -19,7 +20,7 @@ public class HospitalController: ControllerBase
 
     [HttpPost]
     //public async Task<IActionResult> GetPatients(Patient patient, Prescription prescription, Doctor doctor)
-    public async Task<IActionResult> GetPatients(Patient patient)
+    public async Task<IActionResult> GetPatients(PrescriptionDTO med)
     {
         // Patient patientCheck = null;
         // patientCheck = await _dbContext.Patients
