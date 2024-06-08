@@ -2,7 +2,11 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication1.Entities;
 
 //PACKAGES:
-//
+//Microsoft.AspNetCore.OpenApi
+//Swashbuckle.AspNetCore
+//Microsoft.EntityFrameworkCore
+//Microsoft.EntityFrameworkCore.SqlServer
+//Microsoft.EntityFrameworkCore.Design
 
 //KOMENDY:
 
@@ -15,7 +19,8 @@ using WebApplication1.Entities;
 // Tworzenie modeli:
 // dotnet ef dbcontext scaffold "Data Source=localhost;Initial Catalog=APBD;User ID=sa;Password=asd123POKo223;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Context
 
-
+// dotnet ef dbcontext scaffold "Data Source=db-mssql;InitialCatalog=2019SBD;Integrated Security=True;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Context
+// in appsettings.json connection string:
 //"Pjatk": "Data Source=db-mssql;InitialCatalog=2019SBD;Integrated Security=True;Encrypt=False"
 
 //////////////
