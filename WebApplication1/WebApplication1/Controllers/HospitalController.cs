@@ -67,6 +67,14 @@ public class HospitalController: ControllerBase
         {
             return BadRequest("Za dużo leków!");
         }
+
+        await _dbContext.Prescription.AddAsync(new Prescription
+        {
+            Date=presc.Date,
+            DueDate = presc.DueDate,
+            IdPatient = presc.PatientDto.IdPatient,
+            IdDoctor = 1
+        });
         
         //
         // _dbContext.SaveChangesAsync();

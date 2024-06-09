@@ -8,6 +8,7 @@ public class HospitalDbContext: DbContext
     public virtual DbSet<Patient> Patients { get; set; }
     public virtual DbSet<Doctor> Doctors { get; set; }
     public virtual DbSet<Medicament> Meds { get; set; }
+    public virtual DbSet<Prescription> Prescription { get; set; }
 
     public HospitalDbContext()
     {
