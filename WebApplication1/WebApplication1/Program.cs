@@ -15,14 +15,20 @@ using WebApplication1.Entities;
 // dotnet tool install dotnet-ef --version 8.0.0
 //
 //     <InvariantGlobalization>false</InvariantGlobalization>
+
+// dotnet ef migrations add AddedNewTables
+
+// dotnet ef database update
 //
+
+// in appsettings.json connection string:
+//"Pjatk": "Data Source=db-mssql;Database=2019SBD;Integrated Security=True;Encrypt=False"
+
+
 // Tworzenie modeli:
 // dotnet ef dbcontext scaffold "Data Source=localhost;Initial Catalog=APBD;User ID=sa;Password=asd123POKo223;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Context
 
-// dotnet ef dbcontext scaffold "Data Source=db-mssql;InitialCatalog=2019SBD;Integrated Security=True;Encrypt=False" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Context
-// in appsettings.json connection string:
-//"Pjatk": "Data Source=db-mssql;InitialCatalog=2019SBD;Integrated Security=True;Encrypt=False"
-
+// dotnet ef dbcontext scaffold "Data Source=db-mssql;Database=2019SBD;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer --output-dir Models --context-dir Context
 //////////////
 
 var builder = WebApplication.CreateBuilder(args);
